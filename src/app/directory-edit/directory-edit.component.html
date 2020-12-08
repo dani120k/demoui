@@ -1,0 +1,55 @@
+<div class="mail-config-edit">
+    <div class="header">
+        <h2 mat-dialog-title class="dialog-title">
+            <span class="title" *ngIf="!mailConfig.id">
+                Создать директорию
+            </span>
+            <span class="title" *ngIf="mailConfig.id">
+                Редактировать директорию
+            </span>
+
+            <button mat-button color="primary" class="close-button" mat-dialog-close [mat-dialog-close]="false">
+                <span class="mat-button-wrapper">
+                    <mat-icon role="img" class="mat-icon close-icon" aria-hidden="true">
+                        close
+                    </mat-icon>
+                </span>
+            </button>
+        </h2>
+    </div>
+
+    <div class="content">
+        <form #articleForm="ngForm">
+            <div class="row expansionpanel">
+                <div class="cell">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Наименование директории</mat-label>
+                        <input matInput type="text" [(ngModel)]='mailConfig.title' name="mailConfigId"
+                            #title="ngModel">
+                    </mat-form-field>
+                </div>
+            </div>
+
+           
+        </form>
+    </div>
+
+
+    <div class="actions">
+        <button mat-button color="primary" class="close-button" mat-dialog-close [mat-dialog-close]="false">
+            <span class="mat-button-wrapper">
+                <mat-icon role="img" class="mat-icon " aria-hidden="true">
+                    close
+                </mat-icon> Отмена
+            </span>
+        </button>
+        <button mat-button mat-dialog-close [mat-dialog-close]="mailConfig" color="accent" class="save-button"
+            [disabled]="articleForm.invalid">
+            <span class="mat-button-wrapper">
+                <mat-icon role="img" class="mat-icon" aria-hidden="true">
+                    save
+                </mat-icon> Сохранить
+            </span>
+        </button>
+    </div>
+</div>

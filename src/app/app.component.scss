@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.leftpanel{
+    flex: 0 0 600px;
+    width: 600px;
+
+    height: 100vh;
+}
+
+.rightpanel{
+    flex: 1 1 auto;
+
+    height: 100%;
+}
+

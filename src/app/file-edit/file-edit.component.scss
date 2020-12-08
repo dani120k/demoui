@@ -1,0 +1,54 @@
+
+.mail-config-edit {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .header{
+        flex: 0 0 auto;
+    }
+
+    .content{
+        flex: 1 1 auto;
+        height: 100%;
+        overflow: auto;
+
+        padding-bottom: 10px;
+    }
+
+    .close-icon {
+        vertical-align: middle;
+    }
+
+    .close-button {
+        color: grey !important;
+        flex: 0 0 auto;
+    }
+
+    .save-button {
+        background-color: red !important;
+        color: white !important;
+        flex: 0 0 auto;
+    }
+
+    .add-icon {
+        color: red;
+    }
+
+    .delete-icon {
+        color: yellow;
+    }
+
+    .edit-icon {
+        color: grey;
+    }
+
+    .title{
+        flex: 1 1 auto;
+    }
+
+    .dialog-title{
+        display: flex;
+        flex-direction: row;
+    }
+}

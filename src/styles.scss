@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cell-small {
+    //flex: 0;
+  
+    mat-form-field {
+        width: 100%;
+    }
+  
+    margin-left: 5px;
+  }
+  
+  .cell-big{
+    flex: 1;
+  
+    mat-form-field {
+        width: 100%;
+    }
+  
+    margin-left: 5px;
+  }
+  
+  .cell {
+    flex: 1 1 auto;
+  
+    mat-form-field {
+        width: 100%;
+    }
+  
+    margin-left: 5px;
+  }
