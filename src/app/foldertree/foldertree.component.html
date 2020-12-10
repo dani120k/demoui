@@ -16,10 +16,13 @@
             <button mat-icon-button (click)="download(node)" class="buttonaction" *ngIf="node.isVrt">
                 <mat-icon matTooltip="Скачать">south</mat-icon>
             </button>
+            <button mat-icon-button (click)="showPreviewXml(node)" class="buttonaction" *ngIf="node.isVrt">
+              <mat-icon matTooltip="Открыть xml">preview</mat-icon>
+          </button>
             <button mat-icon-button (click)="showPreview(node)" class="buttonaction" *ngIf="node.type == 'file'">
                 <mat-icon matTooltip="Открыть превью">preview</mat-icon>
             </button>
-            <button mat-icon-button (click)="addChildDirectory(node)" class="buttonaction">
+            <button mat-icon-button (click)="addChildDirectory(node)" class="buttonaction" *ngIf="node.type == 'directory'">
                 <mat-icon matTooltip="Добавить директорию">note_add</mat-icon>
             </button>
             <button mat-icon-button (click)="addChildFile(node)" class="buttonaction">
@@ -50,10 +53,13 @@
                 <button mat-icon-button (click)="download(node)" class="buttonaction" *ngIf="node.isVrt">
                     <mat-icon matTooltip="Скачать">south</mat-icon>
                 </button>
+                <button mat-icon-button (click)="showPreviewXml(node)" class="buttonaction" *ngIf="node.isVrt">
+                  <mat-icon matTooltip="Открыть xml">preview</mat-icon>
+              </button>
                 <button mat-icon-button (click)="showPreview(node)" class="buttonaction" *ngIf="node.isVrt">
                     <mat-icon matTooltip="Открыть превью">preview</mat-icon>
                 </button>
-                <button mat-icon-button (click)="addChildDirectory(node)" class="buttonaction">
+                <button mat-icon-button (click)="addChildDirectory(node)" class="buttonaction" *ngIf="node.type == 'directory'">
                     <mat-icon matTooltip="Добавить директорию">note_add</mat-icon>
                 </button>
                 <button mat-icon-button (click)="addChildFile(node)" class="buttonaction">
